@@ -8,7 +8,7 @@
 
 ### Deployed Application:
 
-[Heroku](http://heroku.com)
+[Heroku](https://ru-library.herokuapp.com/)
 
 ### Technologies Used:
 
