@@ -9,7 +9,6 @@
 ### Deployed Application:
 
 [Heroku](http://heroku.com)
-:poop:
 
 ### Technologies Used:
 
