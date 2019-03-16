@@ -1,8 +1,8 @@
-# :smiley_cat: + :tophat: Dr. Seuss Library :books:
+# RU Library :books:
 
 ### A application for Librarians with the following capabilities:
 
-- To query our Library database for books by title or author.
+- To query our Library database for books by title.
 - To review the quantities of books in stock.
 - To checkout books and update the in-stock quantities in our database.
 
@@ -13,7 +13,7 @@
 
 ### Technologies Used:
 
-    Express | MySQL | Materialize CSS | Sequelize
+    Node | Express | Handlebars | MySQL | Sequelize | Materialize CSS
 
 ### Contributors:
 
