@@ -6,6 +6,7 @@
 		"type": "git",
 		"url": "git+https://github.com/JVGH/Project2.git"
 	},
+	"homepage": "https://ru-library.herokuapp.com/",
 	"bugs": {
 		"url": "https://github.com/JVGH/Project2/issues"
 	},
