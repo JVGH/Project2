@@ -6,8 +6,10 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node server.js",
-		"db:pre-migrate": "node app/database/createDB.js",
-		"dev-init": "npm run db:pre-migrate && sequelize db:migrate && sequelize db:seed:all && nodemon server.js",
+		"db-pre-migrate": "node app/database/createDB.js",
+		"db-migrate": "sequelize db:migrate",
+		"db-post-migrate": "sequelize db:seed:all",
+		"dev-init": "npm run db-pre-migrate && npm run db-migrate && npm run db-post-migrate && nodemon server.js",
 		"dev": "nodemon server.js"
 	},
 	"author": "",
