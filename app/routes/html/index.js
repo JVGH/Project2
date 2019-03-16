@@ -3,7 +3,7 @@ const bookController = require('../../controllers').book;
 
 // Base route
 router.get('/', (req, res) => {
-	res.status(200).render('home');
+	res.status(200).render('index');
 });
 
 const success = (books, res) => {

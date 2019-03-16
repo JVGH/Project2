@@ -1,21 +1,28 @@
 {
 	"name": "project-2",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A application for Librarians to, 1) query our Library database for books by title 2) review the quantities of books in stock\tand 3) checkout books and update the in-stock quantities in our database.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JVGH/Project2.git"
+	},
+	"bugs": {
+		"url": "https://github.com/JVGH/Project2/issues"
+	},
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node server.js",
-		"db-pre-migrate": "node app/database/createDB.js",
+		"db-pre-migrate": "node ./app/database/index.js",
 		"db-migrate": "sequelize db:migrate",
 		"db-post-migrate": "sequelize db:seed:all",
 		"dev-init": "npm run db-pre-migrate && npm run db-migrate && npm run db-post-migrate && nodemon server.js",
 		"dev": "nodemon server.js"
 	},
-	"author": "",
 	"license": "ISC",
 	"dependencies": {
 		"body-parser": "^1.18.3",
+		"dotenv": "^7.0.0",
 		"express": "^4.16.4",
 		"express-handlebars": "^3.0.2",
 		"mysql2": "^1.6.5",

@@ -1,4 +1,6 @@
 'use strict';
+// read-set env vars
+require('dotenv').config();
 
 // Pkg Dependencies
 const express = require('express'),
@@ -8,22 +10,24 @@ const express = require('express'),
 
 // App Init
 const app = express();
+// DB Dependency
+const db = require('./app/models');
+
+// App PORT
 const PORT = process.env.PORT || 8080;
 
 // logging (middleware)
 app.use(require('./app/middleware/logger'));
 
-// DB Dependency
-const db = require('./app/models');
-
-app.set('views', path.join(__dirname, './app/views'));
-
-// Body Parser
-app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
 // Set static folder
 app.use(express.static(path.join(__dirname, '/app/public')));
+
+// Body Parser
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Set DEFAULT Views dir
+app.set('views', path.join(__dirname, './app/views'));
 
 // Handlebars
 app.engine(
