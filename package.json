@@ -5,8 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "sequelize db:migrate && sequelize db:seed:all && node server.js",
-		"dev-init": "sequelize db:migrate && sequelize db:seed:all && nodemon server.js",
+		"start": "node server.js",
+		"db:pre-migrate": "node app/database/createDB.js",
+		"dev-init": "npm run db:pre-migrate && sequelize db:migrate && sequelize db:seed:all && nodemon server.js",
 		"dev": "nodemon server.js"
 	},
 	"author": "",
